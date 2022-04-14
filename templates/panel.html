@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        input.right {
+            float: right;
+          }
+    </style>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./styles.css">
+    <title>Bootstrap Dashboard</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark fixed-top bg-info flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#"> &nbsp;        
+            &nbsp;&nbsp;Mindworx</a>
+        
+        <ul class="navbar-nav px-3">
+           
+            <li class="nav-item text-nowrap">
+                {% if user.is_authenticated %}
+                <li>Hello ,{{user.username}}</li>  
+                <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                {% else %}  
+                <li><a href="accounts/reg">Register</a></li>
+                <li style="float:right"><a href="accounts/login">Login</a></li>
+                {% endif %}
+                
+                
+            </li>
+        </ul>
+        
+    </nav>
+    <h2>pppppp</h2>
+    
+    
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-2 bg-light d-none d-md-block sidebar">
+                <div class="left-sidebar">
+                    <ul class="nav flex-column sidebar-nav">
+                       
+                        <li class="nav-item">
+                            <h2> &nbsp;</h2>
+                            <a class="nav-link" href="#">
+                                <svg class="bi bi-chevron-right" width="16" height="16" viewBox="0 0 20 20"
+                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z"
+                                        clip-rule="evenodd" /></svg >
+                                       
+                                Active Contracts 
+
+                                
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <svg class="bi bi-chevron-right" width="16" height="16" viewBox="0 0 20 20"
+                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z"
+                                        clip-rule="evenodd" /></svg>
+                                Clients
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <svg class="bi bi-chevron-right" width="16" height="16" viewBox="0 0 20 20"
+                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z"
+                                        clip-rule="evenodd" /></svg>
+                                Invoices
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <svg class="bi bi-chevron-right" width="16" height="16" viewBox="0 0 20 20"
+                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z"
+                                        clip-rule="evenodd" /></svg>
+                                Reports
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                &nbsp;
+                &nbsp;
+                <h3 >Contractors</h3>
+                <hr>
+                <div class="table-responsive">
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">First Name</th>
+                                <th scope="col">Last Name</th>
+                                <th scope="col">Position</th>
+                                <th scope="col">Company</th>
+                                <th scope="col">Duration</th>
+                                <th scope="col">Pay Rate</th>
+                                <th scope="col">Bill Rate</th>
+                                <th scope="col">Start Date</th>
+                                <th scope="col">End Date</th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>Back-end developer</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Raghunandan</td>
+                                <td>Vempati</td>
+                                <td>JS developer</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Suresh</td>
+                                <td>Mohan</td>
+                                <td>Project Manager</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Syam</td>
+                                <td>Babu</td>
+                                <td>Scrum master</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>Karthik</td>
+                                <td>Ravichandran</td>
+                                <td>Back-end developer</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row"></th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td> 
+                                <td></td>
+                                                                                             
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <form action="upload.php" method="POST">
+                                    <input type="file" multiple>
+                                    <p>Drag your files here or click in this area.</p>
+                                   
+                                    <a href="#" class="btn btn-info">Upload</a>
+                                  </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">                                
+                                <a href="{% url 'viewforms' %}" class="btn btn-info">Add Contractor</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Invoice #184389</h5>
+                                <p class="card-text">Donec nec justo eget felis facilisis fermentum. Aliquam porttitor
+                                    mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+                                <a href="#" class="btn btn-info">Print</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Invoice #184391</h5>
+                                <p class="card-text">Donec nec justo eget felis facilisis fermentum. Aliquam porttitor
+                                    mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+                                <a href="#" class="btn btn-info">Print</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script></script>
+</body>
+
+</html>
